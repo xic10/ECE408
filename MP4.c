@@ -25,7 +25,7 @@ __global__ void conv3d(float *input, float *output, const int z_size,
   int tx = threadIdx.x;
   int ty = threadIdx.y;
   int tz = threadIdx.z;
-  int col = blockIdx.x * TILEWIDTH + tx; //blockDim is actually TILEWIDTH  
+  int col = blockIdx.x * TILEWIDTH + tx; //blockDim is actually TILEWIDTH + 2 * MASKRADIUS
   int row = blockIdx.y * TILEWIDTH + ty;
   int hgt = blockIdx.z * TILEWIDTH + tz;
   
