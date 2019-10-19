@@ -1,0 +1,13 @@
+profile:
+  id: 5d97b1dc88a5ec28f9cb9483
+  firstname: Xiang
+  lastname: Li
+  username: xiangl14
+  email: xiangl14@illinois.edu
+  access_key: auth0|5d97b1dd91121a0e5767029d
+  secret_key: JGFyZ29uMmkkdj0xOSRtPTMyNzY4LHQ9NCxwPTQkV2gzSlh3enJzTE5vdG0rOGpPaHlhUSQ4VjA3TUw1eUpvL2l3ejVleTAyUEoxUnBsZUw2Z1Y4KzNzMUprVWYxbW1j
+  affiliation: uiuc
+  team:
+    name: lakersfirst
+  role: ece408
+
