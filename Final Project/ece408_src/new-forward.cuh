@@ -10,7 +10,7 @@ namespace mxnet
 {
 namespace op
 {
-// __constant__ float filter[24*12*5*5];
+__constant__ float filter[24*12*5*5];
 __global__ void shared_memory_convolution(float *y, const float *x, const float *k, const int B, const int M, const int C, const int H, const int W, const int K)
 {
 
@@ -157,7 +157,7 @@ void forward<gpu, float>(mshadow::Tensor<gpu, 4, float> &y, const mshadow::Tenso
     
     // __constant__ float filter[24*12*5*5];
     // Weight matrix (kernel values) in constant memory
-    // cudaMemcpyToSymbol(filter,w.dptr_,M*C*K*K*sizeof(float));
+    cudaMemcpyToSymbol(filter,w.dptr_,M*C*K*K*sizeof(float));
     
 
     // Unroll
